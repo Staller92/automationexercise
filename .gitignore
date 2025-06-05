@@ -1,3 +1,4 @@
+.gitignore
 # Compiled class file
 *.class
 
@@ -19,6 +20,35 @@
 *.tar.gz
 *.rar
 
-# virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
+# VM crash logs
 hs_err_pid*
 replay_pid*
+
+# Maven / Gradle output
+/target/
+/build/
+
+# IntelliJ IDEA
+.idea/
+*.iml
+
+# Allure results & config
+/target/allure-results/
+/target/test-classes/allure.properties
+/target/test-classes/META-INF/services/io.qameta.allure.listener.TestLifecycleListener
+/src/test/resources/allure.properties
+/src/test/resources/META-INF/services/io.qameta.allure.listener.TestLifecycleListener
+/.allure/
+/.allure/**
+
+# Allure specific files
+**/allure-plugin.yml
+**/index.js
+**/styles.css
+**/custom-logo.svg
+**/README.txt
+**/allure.properties
+
+# Config files
+/src/test/resources/logback.xml
+/target/test-classes/logback.xml
