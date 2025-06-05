@@ -1,0 +1,10 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+<suite name="UI/API Tests suit" parallel="methods" thread-count="4">
+    <test name="UI/API Tests">
+        <classes>
+            <class name="ui.tests.ProductsTest"/>
+            <class name="api.tests.ProductsTest"/>
+            <class name="api.tests.BrandsTest"/>
+        </classes>
+    </test>
+</suite>
