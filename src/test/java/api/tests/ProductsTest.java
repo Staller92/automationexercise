@@ -2,6 +2,7 @@ package api.tests;
 
 import api.models.Product;
 import api.models.ProductsResponse;
+import api.requests.ProductsRequests;
 import api.utils.JsonUtils;
 import org.assertj.core.api.SoftAssertions;
 import org.testng.annotations.Test;
@@ -14,10 +15,7 @@ public class ProductsTest extends BaseApiTest {
 
     @Test
     public void getAllProductsList() {
-        String rawProductsResponse = given()
-                //.log().all()
-                .when()
-                .get("/api/productsList")
+        String rawProductsResponse = ProductsRequests.getProductsList()
                 .then()
                 //.log().all()
                 .statusCode(200)

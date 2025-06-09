@@ -2,6 +2,7 @@ package api.tests;
 
 import api.models.Brand;
 import api.models.BrandResponse;
+import api.requests.BrandRequests;
 import api.utils.JsonUtils;
 import org.assertj.core.api.SoftAssertions;
 import org.testng.annotations.Test;
@@ -14,10 +15,7 @@ public class BrandsTest extends BaseApiTest {
 
     @Test
     public void getBrandsList() {
-        String rawBrandsResponse = given()
-                //.log().all()
-                .when()
-                .get("/api/brandsList")
+        String rawBrandsResponse = BrandRequests.getBrandsList()
                 .then()
                 //.log().all()
                 .statusCode(200)
