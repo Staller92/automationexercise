@@ -13,6 +13,7 @@ import ui.config.ConfigurationManager;
 public class BaseApiTest {
     private static final Logger logger = LoggerFactory.getLogger(BaseApiTest.class);
     private static final RequestSpecification requestSpec = new RequestSpecBuilder()
+            .addFilter(new SchemaValidationFilter())
             .addFilter(new CustomRestAssuredFilter())
             .setBaseUri(ConfigurationManager.config().baseUrl())
             .setAccept(ContentType.JSON)

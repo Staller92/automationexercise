@@ -9,8 +9,6 @@ import org.testng.annotations.Test;
 
 import java.util.List;
 
-import static io.restassured.RestAssured.given;
-
 public class ProductsTest extends BaseApiTest {
 
     @Test

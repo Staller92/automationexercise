@@ -9,7 +9,6 @@ import org.testng.annotations.Test;
 
 import java.util.List;
 
-import static io.restassured.RestAssured.given;
 
 public class BrandsTest extends BaseApiTest {
 
@@ -31,7 +30,6 @@ public class BrandsTest extends BaseApiTest {
         softly.assertThat(payouts).isNotEmpty();
         softly.assertAll();
     }
-
 
 
 }

@@ -75,6 +75,6 @@ public class CustomRestAssuredFilter implements OrderedFilter {
 
     @Override
     public int getOrder() {
-        return Integer.MAX_VALUE;
+        return Integer.MIN_VALUE;
     }
 }
